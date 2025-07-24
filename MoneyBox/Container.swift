@@ -16,7 +16,11 @@ extension Container {
   }
 
   var keychainManager: Factory<TokenStore> {
-    Factory(self) { KeychainManager() }
+    Factory(self) { KeychainManager.shared }
+  }
+  
+  var accountsManager: Factory<AccountsManagerProtocol> {
+    Factory(self) { AccountManager() }
   }
 
   var loginManager: Factory<LoginManager> {

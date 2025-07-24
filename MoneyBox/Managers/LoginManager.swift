@@ -9,13 +9,10 @@ import Foundation
 import Networking
 
 protocol LoginManagerProtocol {
-  func login(
-    email: String,
-    password: String,
-    completion: @escaping (Result<LoginResponse, Error>) -> Void
-  )
-
+  func login(email: String, password: String, completion: @escaping (Result<LoginResponse, Error>) -> Void) // Old way off handling login
+  func login(email: String, password: String) async throws -> LoginResponse // async method
   func logout() throws
+
   var currentToken: String? { get }
 }
 
@@ -25,7 +22,7 @@ struct LoginManager: LoginManagerProtocol {
 
   init(
     provider: DataProviderLogic = DataProvider(),
-    tokenStore: TokenStore = KeychainManager()
+    tokenStore: TokenStore = KeychainManager.shared
   ) {
     self.provider = provider
     self.tokenStore = tokenStore
@@ -52,6 +49,14 @@ struct LoginManager: LoginManagerProtocol {
         }
       case .failure(let err):
         completion(.failure(err))
+      }
+    }
+  }
+
+  func login(email: String, password: String) async throws -> LoginResponse {
+    try await withCheckedThrowingContinuation { cont in
+      login(email: email, password: password) { result in
+        cont.resume(with: result)
       }
     }
   }
