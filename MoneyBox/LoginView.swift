@@ -7,20 +7,28 @@
 
 import SwiftUI
 
-
 struct LoginView: View {
-    var body: some View {
-        VStack(spacing: 16) {
-          TextField("Email", text: .constant(""))
-                .textFieldStyle(.roundedBorder)
-            SecureField("Password", text: .constant(""))
-                .textFieldStyle(.roundedBorder)
-            
-            Button("Log In") {
-                Task {  }
-            }
-        }
-        .padding()
-        .navigationTitle("Login")
+  @State private var email = ""
+  @State private var password = ""
+
+  var body: some View {
+    VStack(spacing: 16) {
+      TextField("Email", text: $email)
+        .textFieldStyle(.roundedBorder)
+        .keyboardType(.emailAddress)
+        .autocapitalization(.none)
+
+      SecureField("Password", text: $password)
+        .textFieldStyle(.roundedBorder)
+
+      Button("Log In") {
+        // Implementing functionality here. :)
+      }
+      .buttonStyle(.borderedProminent)
+
+      Spacer()
     }
+    .padding()
+    .navigationTitle("Login")
+  }
 }
