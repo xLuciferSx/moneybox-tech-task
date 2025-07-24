@@ -8,11 +8,11 @@
 import Factory
 import Networking
 
-protocol AccountsManagerProtocol {
+protocol AccountManagerProtocol {
   func fetchProducts(completion: @escaping (Result<AccountResponse, Error>) -> Void)
 }
 
-struct AccountManager: AccountsManagerProtocol {
+struct AccountManager: AccountManagerProtocol {
   @Injected(\.dataProvider) var dataProvider
 
   func fetchProducts(completion: @escaping (Result<AccountResponse, Error>) -> Void) {

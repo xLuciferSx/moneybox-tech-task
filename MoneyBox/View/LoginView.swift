@@ -37,7 +37,10 @@ struct LoginView: View {
     }
     .padding()
     .navigationTitle("Login")
-    .alert(viewModel.errorMessage ?? "", isPresented: $viewModel.showingAlert) {
+    .alert(
+      viewModel.errorMessage ?? "",
+      isPresented: $viewModel.showingAlert)
+    {
       Button("OK") { viewModel.clearError() }
     }
   }

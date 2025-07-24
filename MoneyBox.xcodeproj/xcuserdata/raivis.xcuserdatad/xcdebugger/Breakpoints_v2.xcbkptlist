@@ -34,36 +34,6 @@
             endingLineNumber = "40"
             landmarkName = "login()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "6865A228-E4BA-4CFF-8CCB-C773F1571877 - d80450a89ba13771"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for MoneyBox.LoginViewModel.login() async -&gt; ()"
-                  moduleName = "MoneyBox.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/raivis/Desktop/MB_Tech_Task/MoneyBox/ViewModel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40">
-               </Location>
-               <Location
-                  uuid = "6865A228-E4BA-4CFF-8CCB-C773F1571877 - e2625d3d0d962872"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for MoneyBox.LoginViewModel.login() async -&gt; ()"
-                  moduleName = "MoneyBox.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/raivis/Desktop/MB_Tech_Task/MoneyBox/ViewModel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -92,40 +62,10 @@
             filePath = "MoneyBox/Managers/LoginManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "login(email:password:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B9892B25-7329-4B0D-B3BC-54177EB4DD89 - 4527a3f9f522f6dc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.CheckedContinuation&lt;Networking.LoginResponse, Swift.Error&gt;) -&gt; () in MoneyBox.LoginManager.login(email: Swift.String, password: Swift.String) async throws -&gt; Networking.LoginResponse"
-                  moduleName = "MoneyBox.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/raivis/Desktop/MB_Tech_Task/MoneyBox/Managers/LoginManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58">
-               </Location>
-               <Location
-                  uuid = "B9892B25-7329-4B0D-B3BC-54177EB4DD89 - c98451631e5edc08"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Networking.LoginResponse, Swift.Error&gt;) -&gt; () in closure #1 (Swift.CheckedContinuation&lt;Networking.LoginResponse, Swift.Error&gt;) -&gt; () in MoneyBox.LoginManager.login(email: Swift.String, password: Swift.String) async throws -&gt; Networking.LoginResponse"
-                  moduleName = "MoneyBox.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/raivis/Desktop/MB_Tech_Task/MoneyBox/Managers/LoginManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -138,8 +78,8 @@
             filePath = "MoneyBox/Managers/LoginManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "login(email:password:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -154,8 +94,8 @@
             filePath = "MoneyBox/Managers/LoginManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "login(email:password:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -170,8 +110,8 @@
             filePath = "MoneyBox/Managers/LoginManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "login(email:password:completion:)"
             landmarkType = "7">
          </BreakpointContent>

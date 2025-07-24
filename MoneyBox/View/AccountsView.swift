@@ -6,10 +6,18 @@
 //
 
 import SwiftUI
+import Factory
 
 struct AccountsView: View {
+  @Injected(\.loginManager) var loginManager
+  
   var body: some View {
-    Text("AccountsView")
+    Button {
+      try? loginManager.logout()
+    } label: {
+      Text("Logout")
+    }
+
   }
 }
 

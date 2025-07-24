@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Factory
 import Networking
 
 protocol LoginManagerProtocol {
@@ -17,19 +18,11 @@ protocol LoginManagerProtocol {
 }
 
 struct LoginManager: LoginManagerProtocol {
-  private let provider: DataProviderLogic
-  private let tokenStore: TokenStore
-
-  init(
-    provider: DataProviderLogic = DataProvider(),
-    tokenStore: TokenStore = KeychainManager.shared
-  ) {
-    self.provider = provider
-    self.tokenStore = tokenStore
-  }
+  @Injected(\.dataProvider) var provider
+  @Injected(\.keychainManager) var keychainManager
 
   var currentToken: String? {
-    try? tokenStore.retrieve()
+    try? keychainManager.retrieve()
   }
 
   func login(
@@ -42,7 +35,7 @@ struct LoginManager: LoginManagerProtocol {
       switch result {
       case .success(let resp):
         do {
-          try tokenStore.save(resp.session.bearerToken)
+          try keychainManager.save(resp.session.bearerToken)
           completion(.success(resp))
         } catch {
           completion(.failure(error))
@@ -62,6 +55,6 @@ struct LoginManager: LoginManagerProtocol {
   }
 
   func logout() throws {
-    try tokenStore.clear()
+    try keychainManager.clear()
   }
 }
