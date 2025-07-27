@@ -18,6 +18,12 @@
 		1F77D5592E36DDF4001D9A12 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F263E1A2E32D316006CA3AA /* LoginManager.swift */; };
 		1F77D55A2E36DDF9001D9A12 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F263E182E32D27A006CA3AA /* KeychainManager.swift */; };
 		1F77D55B2E36DE19001D9A12 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F263E142E32CFC2006CA3AA /* Container.swift */; };
+		1F77D55E2E36DF7A001D9A12 /* StubDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F77D55D2E36DF7A001D9A12 /* StubDataProvider.swift */; };
+		1F77D55F2E36DF7E001D9A12 /* StubDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F77D55D2E36DF7A001D9A12 /* StubDataProvider.swift */; };
+		1F77D5612E36DFA0001D9A12 /* StubKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F77D5602E36DFA0001D9A12 /* StubKeychain.swift */; };
+		1F77D5622E36DFA0001D9A12 /* StubKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F77D5602E36DFA0001D9A12 /* StubKeychain.swift */; };
+		1F77D5632E36E035001D9A12 /* LoginSucceed.json in Resources */ = {isa = PBXBuildFile; fileRef = B2CA47692794D6D70041B3A5 /* LoginSucceed.json */; };
+		1F77D5642E36E039001D9A12 /* Accounts.json in Resources */ = {isa = PBXBuildFile; fileRef = B2CA47B2279604A10041B3A5 /* Accounts.json */; };
 		1F819D1B2E32A45F008D5B45 /* MoneyBoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F819D1A2E32A45F008D5B45 /* MoneyBoxApp.swift */; };
 		1F819D1D2E32A4A3008D5B45 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F819D1C2E32A4A3008D5B45 /* LoginView.swift */; };
 		1F903C0A2E36699700AAD5C2 /* AccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F903C092E36699300AAD5C2 /* AccountsViewModel.swift */; };
@@ -59,6 +65,8 @@
 		1F263E1A2E32D316006CA3AA /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		1F38386D2E36A9C000DFBAFA /* ProductDetailsLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsLogic.swift; sourceTree = "<group>"; };
 		1F77D5562E36DC8C001D9A12 /* LoginManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManagerTests.swift; sourceTree = "<group>"; };
+		1F77D55D2E36DF7A001D9A12 /* StubDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubDataProvider.swift; sourceTree = "<group>"; };
+		1F77D5602E36DFA0001D9A12 /* StubKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubKeychain.swift; sourceTree = "<group>"; };
 		1F819D1A2E32A45F008D5B45 /* MoneyBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyBoxApp.swift; sourceTree = "<group>"; };
 		1F819D1C2E32A4A3008D5B45 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1F903C092E36699300AAD5C2 /* AccountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewModel.swift; sourceTree = "<group>"; };
@@ -113,6 +121,15 @@
 				1F263E182E32D27A006CA3AA /* KeychainManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		1F77D55C2E36DF6F001D9A12 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1F77D5602E36DFA0001D9A12 /* StubKeychain.swift */,
+				1F77D55D2E36DF7A001D9A12 /* StubDataProvider.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		1F8C36F22E32C1D600CC7C35 /* ViewModel */ = {
@@ -209,6 +226,7 @@
 		B2CA46E12793508A0041B3A5 /* MoneyBoxTests */ = {
 			isa = PBXGroup;
 			children = (
+				1F77D55C2E36DF6F001D9A12 /* Helpers */,
 				1F77D5562E36DC8C001D9A12 /* LoginManagerTests.swift */,
 				B2CA47662794D69A0041B3A5 /* StubData.swift */,
 				B2CA47682794D6AC0041B3A5 /* ResponseJsons */,
@@ -337,6 +355,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F77D5632E36E035001D9A12 /* LoginSucceed.json in Resources */,
+				1F77D5642E36E039001D9A12 /* Accounts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,8 +369,10 @@
 			files = (
 				1F819D1B2E32A45F008D5B45 /* MoneyBoxApp.swift in Sources */,
 				1F263E152E32CFC4006CA3AA /* Container.swift in Sources */,
+				1F77D5612E36DFA0001D9A12 /* StubKeychain.swift in Sources */,
 				1F819D1D2E32A4A3008D5B45 /* LoginView.swift in Sources */,
 				1F903C112E366EFF00AAD5C2 /* DataProvider+Extension.swift in Sources */,
+				1F77D55E2E36DF7A001D9A12 /* StubDataProvider.swift in Sources */,
 				1FCE43DE2E32DF880082A8C8 /* AccountsManager.swift in Sources */,
 				1F263E1B2E32D316006CA3AA /* LoginManager.swift in Sources */,
 				1F38386E2E36A9C600DFBAFA /* ProductDetailsLogic.swift in Sources */,
@@ -372,9 +394,11 @@
 				B2CA47672794D69A0041B3A5 /* StubData.swift in Sources */,
 				1F77D55B2E36DE19001D9A12 /* Container.swift in Sources */,
 				1F77D5592E36DDF4001D9A12 /* LoginManager.swift in Sources */,
+				1F77D55F2E36DF7E001D9A12 /* StubDataProvider.swift in Sources */,
 				1F77D5582E36DDEE001D9A12 /* AccountsManager.swift in Sources */,
 				1F77D5572E36DC92001D9A12 /* LoginManagerTests.swift in Sources */,
 				1F77D55A2E36DDF9001D9A12 /* KeychainManager.swift in Sources */,
+				1F77D5622E36DFA0001D9A12 /* StubKeychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
