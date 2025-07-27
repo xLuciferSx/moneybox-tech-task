@@ -2,8 +2,6 @@
 
 This project is a lightweight iOS app built using SwiftUI, TCA (The Composable Architecture), and MVVM. It covers key functionality such as logging in, viewing accounts, and adding money to a product.
 
-[GitHub Repo](https://github.com/xLuciferSx/moneybox-tech-task)
-
 ## Architecture
 
 **MVVM** is used for the Login and Accounts screens.  
