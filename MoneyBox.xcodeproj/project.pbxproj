@@ -13,6 +13,7 @@
 		1F263E1B2E32D316006CA3AA /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F263E1A2E32D316006CA3AA /* LoginManager.swift */; };
 		1F38386E2E36A9C600DFBAFA /* ProductDetailsLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F38386D2E36A9C000DFBAFA /* ProductDetailsLogic.swift */; };
 		1F3838712E36AA2F00DFBAFA /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 1F3838702E36AA2F00DFBAFA /* ComposableArchitecture */; };
+		1F77D5572E36DC92001D9A12 /* LoginManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F77D5562E36DC8C001D9A12 /* LoginManagerTests.swift */; };
 		1F819D1B2E32A45F008D5B45 /* MoneyBoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F819D1A2E32A45F008D5B45 /* MoneyBoxApp.swift */; };
 		1F819D1D2E32A4A3008D5B45 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F819D1C2E32A4A3008D5B45 /* LoginView.swift */; };
 		1F903C0A2E36699700AAD5C2 /* AccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F903C092E36699300AAD5C2 /* AccountsViewModel.swift */; };
@@ -53,6 +54,7 @@
 		1F263E182E32D27A006CA3AA /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		1F263E1A2E32D316006CA3AA /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		1F38386D2E36A9C000DFBAFA /* ProductDetailsLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsLogic.swift; sourceTree = "<group>"; };
+		1F77D5562E36DC8C001D9A12 /* LoginManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManagerTests.swift; sourceTree = "<group>"; };
 		1F819D1A2E32A45F008D5B45 /* MoneyBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyBoxApp.swift; sourceTree = "<group>"; };
 		1F819D1C2E32A4A3008D5B45 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1F903C092E36699300AAD5C2 /* AccountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewModel.swift; sourceTree = "<group>"; };
@@ -119,13 +121,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		1F8C36F42E32C1E300CC7C35 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		1F8C36F52E32C1EB00CC7C35 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,20 +160,6 @@
 			path = Subviews;
 			sourceTree = "<group>";
 		};
-		1F903C152E3680EA00AAD5C2 /* UnitTests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UnitTests;
-			sourceTree = "<group>";
-		};
-		1F903C162E3680F200AAD5C2 /* MockData */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MockData;
-			sourceTree = "<group>";
-		};
 		1FCE43CE2E32D4B80082A8C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,7 +193,6 @@
 			children = (
 				1F263E142E32CFC2006CA3AA /* Container.swift */,
 				B2CA46D92793508A0041B3A5 /* Info.plist */,
-				1F8C36F42E32C1E300CC7C35 /* Model */,
 				1F8C36F52E32C1EB00CC7C35 /* View */,
 				1F8C36F22E32C1D600CC7C35 /* ViewModel */,
 				1F263E172E32D26D006CA3AA /* Managers */,
@@ -225,8 +205,7 @@
 		B2CA46E12793508A0041B3A5 /* MoneyBoxTests */ = {
 			isa = PBXGroup;
 			children = (
-				1F903C162E3680F200AAD5C2 /* MockData */,
-				1F903C152E3680EA00AAD5C2 /* UnitTests */,
+				1F77D5562E36DC8C001D9A12 /* LoginManagerTests.swift */,
 				B2CA47662794D69A0041B3A5 /* StubData.swift */,
 				B2CA47682794D6AC0041B3A5 /* ResponseJsons */,
 			);
@@ -387,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2CA47672794D69A0041B3A5 /* StubData.swift in Sources */,
+				1F77D5572E36DC92001D9A12 /* LoginManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
