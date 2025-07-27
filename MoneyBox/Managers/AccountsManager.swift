@@ -9,18 +9,21 @@ import Factory
 import Networking
 
 protocol AccountManagerProtocol {
-  func fetchProducts(completion: @escaping (Result<AccountResponse, Error>) -> Void)
+  func fetchProducts() async throws -> AccountResponse
 }
 
 struct AccountManager: AccountManagerProtocol {
   @Injected(\.dataProvider) var dataProvider
+  @Injected(\.keychainManager) var keychainManager
 
-  func fetchProducts(completion: @escaping (Result<AccountResponse, Error>) -> Void) {
-    dataProvider.fetchProducts { result in
-      switch result {
-        case .success(let resp): completion(.success(resp))
-        case .failure(let err): completion(.failure(err))
+  func fetchProducts() async throws -> AccountResponse {
+    do {
+      return try await dataProvider.fetchProducts()
+    } catch {
+      if error.localizedDescription.lowercased().contains("expired") { //No status code and i have to relly on text....
+        try? keychainManager.clear()
       }
+      throw error
     }
   }
 }

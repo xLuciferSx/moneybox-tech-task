@@ -12,12 +12,12 @@ struct LoginView: View {
 
   var body: some View {
     VStack(spacing: 16) {
-      TextField("Email", text: $viewModel.email)
+      TextField("email".localized, text: $viewModel.email)
         .textFieldStyle(.roundedBorder)
         .keyboardType(.emailAddress)
         .autocapitalization(.none)
 
-      SecureField("Password", text: $viewModel.password)
+      SecureField("password".localized, text: $viewModel.password)
         .textFieldStyle(.roundedBorder)
 
       Button {
@@ -26,7 +26,7 @@ struct LoginView: View {
         if viewModel.isLoading {
           ProgressView()
         } else {
-          Text("Log In")
+          Text("login".localized)
             .frame(maxWidth: .infinity)
         }
       }
@@ -36,12 +36,12 @@ struct LoginView: View {
       Spacer()
     }
     .padding()
-    .navigationTitle("Login")
+    .navigationTitle("login".localized)
     .alert(
       viewModel.errorMessage ?? "",
       isPresented: $viewModel.showingAlert)
     {
-      Button("OK") { viewModel.clearError() }
+      Button("ok".localized) { viewModel.clearError() }
     }
   }
 }

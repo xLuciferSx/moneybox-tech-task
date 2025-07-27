@@ -13,6 +13,13 @@
 		1F263E1B2E32D316006CA3AA /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F263E1A2E32D316006CA3AA /* LoginManager.swift */; };
 		1F819D1B2E32A45F008D5B45 /* MoneyBoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F819D1A2E32A45F008D5B45 /* MoneyBoxApp.swift */; };
 		1F819D1D2E32A4A3008D5B45 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F819D1C2E32A4A3008D5B45 /* LoginView.swift */; };
+		1F903C0A2E36699700AAD5C2 /* AccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F903C092E36699300AAD5C2 /* AccountsViewModel.swift */; };
+		1F903C0F2E366C1C00AAD5C2 /* AuthorizedNetworkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F903C0E2E366C1C00AAD5C2 /* AuthorizedNetworkable.swift */; };
+		1F903C112E366EFF00AAD5C2 /* DataProvider+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F903C102E366EF500AAD5C2 /* DataProvider+Extension.swift */; };
+		1F903C142E367D0B00AAD5C2 /* AccountCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F903C132E367D0B00AAD5C2 /* AccountCardView.swift */; };
+		1F903C182E3682B800AAD5C2 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1F903C172E3682B800AAD5C2 /* Localizable.xcstrings */; };
+		1F903C1A2E3684CA00AAD5C2 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F903C192E3684C600AAD5C2 /* String+Extension.swift */; };
+		1F903C1C2E368DFB00AAD5C2 /* ProductDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F903C1B2E368DF600AAD5C2 /* ProductDetailsView.swift */; };
 		1FCE43D02E32D4B80082A8C8 /* FactoryTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 1FCE43CF2E32D4B80082A8C8 /* FactoryTesting */; };
 		1FCE43D32E32D5070082A8C8 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 1FCE43D22E32D5070082A8C8 /* Factory */; };
 		1FCE43D52E32D5070082A8C8 /* FactoryKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1FCE43D42E32D5070082A8C8 /* FactoryKit */; };
@@ -44,6 +51,13 @@
 		1F263E1A2E32D316006CA3AA /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		1F819D1A2E32A45F008D5B45 /* MoneyBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyBoxApp.swift; sourceTree = "<group>"; };
 		1F819D1C2E32A4A3008D5B45 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		1F903C092E36699300AAD5C2 /* AccountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewModel.swift; sourceTree = "<group>"; };
+		1F903C0E2E366C1C00AAD5C2 /* AuthorizedNetworkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedNetworkable.swift; sourceTree = "<group>"; };
+		1F903C102E366EF500AAD5C2 /* DataProvider+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataProvider+Extension.swift"; sourceTree = "<group>"; };
+		1F903C132E367D0B00AAD5C2 /* AccountCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCardView.swift; sourceTree = "<group>"; };
+		1F903C172E3682B800AAD5C2 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		1F903C192E3684C600AAD5C2 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		1F903C1B2E368DF600AAD5C2 /* ProductDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsView.swift; sourceTree = "<group>"; };
 		1FCE43DB2E32DDB20082A8C8 /* AccountsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsView.swift; sourceTree = "<group>"; };
 		1FCE43DD2E32DF830082A8C8 /* AccountsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsManager.swift; sourceTree = "<group>"; };
 		B24EED92288ED5740016C233 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Networking; sourceTree = "<group>"; };
@@ -93,6 +107,7 @@
 		1F8C36F22E32C1D600CC7C35 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				1F903C092E36699300AAD5C2 /* AccountsViewModel.swift */,
 				1F263E112E32C35C006CA3AA /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
@@ -108,7 +123,9 @@
 		1F8C36F52E32C1EB00CC7C35 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1F903C122E367CBF00AAD5C2 /* Subviews */,
 				1FCE43DB2E32DDB20082A8C8 /* AccountsView.swift */,
+				1F903C1B2E368DF600AAD5C2 /* ProductDetailsView.swift */,
 				1F819D1C2E32A4A3008D5B45 /* LoginView.swift */,
 			);
 			path = View;
@@ -117,9 +134,43 @@
 		1F8C36F72E32C1FC00CC7C35 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1F903C0B2E366B4F00AAD5C2 /* Helpers */,
 				B2CA46D42793508A0041B3A5 /* Assets.xcassets */,
+				1F903C172E3682B800AAD5C2 /* Localizable.xcstrings */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		1F903C0B2E366B4F00AAD5C2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1F903C192E3684C600AAD5C2 /* String+Extension.swift */,
+				1F903C102E366EF500AAD5C2 /* DataProvider+Extension.swift */,
+				1F903C0E2E366C1C00AAD5C2 /* AuthorizedNetworkable.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1F903C122E367CBF00AAD5C2 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				1F903C132E367D0B00AAD5C2 /* AccountCardView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		1F903C152E3680EA00AAD5C2 /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UnitTests;
+			sourceTree = "<group>";
+		};
+		1F903C162E3680F200AAD5C2 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MockData;
 			sourceTree = "<group>";
 		};
 		1FCE43CE2E32D4B80082A8C8 /* Frameworks */ = {
@@ -167,6 +218,8 @@
 		B2CA46E12793508A0041B3A5 /* MoneyBoxTests */ = {
 			isa = PBXGroup;
 			children = (
+				1F903C162E3680F200AAD5C2 /* MockData */,
+				1F903C152E3680EA00AAD5C2 /* UnitTests */,
 				B2CA47662794D69A0041B3A5 /* StubData.swift */,
 				B2CA47682794D6AC0041B3A5 /* ResponseJsons */,
 			);
@@ -283,6 +336,7 @@
 			files = (
 				B2CA47712794D8E50041B3A5 /* LoginSucceed.json in Resources */,
 				B2CA46D52793508A0041B3A5 /* Assets.xcassets in Resources */,
+				1F903C182E3682B800AAD5C2 /* Localizable.xcstrings in Resources */,
 				B2CA47B42796052F0041B3A5 /* Accounts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,11 +358,17 @@
 				1F819D1B2E32A45F008D5B45 /* MoneyBoxApp.swift in Sources */,
 				1F263E152E32CFC4006CA3AA /* Container.swift in Sources */,
 				1F819D1D2E32A4A3008D5B45 /* LoginView.swift in Sources */,
+				1F903C112E366EFF00AAD5C2 /* DataProvider+Extension.swift in Sources */,
 				1FCE43DE2E32DF880082A8C8 /* AccountsManager.swift in Sources */,
 				1F263E1B2E32D316006CA3AA /* LoginManager.swift in Sources */,
+				1F903C1A2E3684CA00AAD5C2 /* String+Extension.swift in Sources */,
 				1FCE43DC2E32DDB60082A8C8 /* AccountsView.swift in Sources */,
 				1F263E122E32C361006CA3AA /* LoginViewModel.swift in Sources */,
+				1F903C0A2E36699700AAD5C2 /* AccountsViewModel.swift in Sources */,
 				1F263E192E32D27D006CA3AA /* KeychainManager.swift in Sources */,
+				1F903C1C2E368DFB00AAD5C2 /* ProductDetailsView.swift in Sources */,
+				1F903C142E367D0B00AAD5C2 /* AccountCardView.swift in Sources */,
+				1F903C0F2E366C1C00AAD5C2 /* AuthorizedNetworkable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +448,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -442,6 +503,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
