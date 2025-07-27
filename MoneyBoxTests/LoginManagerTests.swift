@@ -25,7 +25,6 @@ class LoginManagerTests {
 
   @Test("Login User Succesfully and save their bearer token")
   func login_success_savesTokenAndUser() async throws {
-    // Given
     let bundle = Bundle(for: type(of: self))
     let url = bundle.url(forResource: "LoginSucceed", withExtension: "json")!
     let data = try Data(contentsOf: url)
@@ -36,11 +35,9 @@ class LoginManagerTests {
     var sut = LoginManager()
     sut.dataProvider = stubDP
     sut.keychainManager = stubKC
-    
-    // When
+
     let out = try await sut.login(email: "test+ios@moneyboxapp.com", password: "password")
 
-    // Then
     #expect(out.session.bearerToken == resp.session.bearerToken)
     #expect(out.user.firstName == resp.user.firstName)
 
@@ -73,7 +70,6 @@ class LoginManagerTests {
 
   @Test("Logout clears keychain")
   func test_logout_clearsKeychain() {
-    // Given
     var sut = LoginManager()
     sut.keychainManager = stubKC
     let mockUser = LoginResponse.mock().user
@@ -85,10 +81,8 @@ class LoginManagerTests {
     #expect(sut.currentToken == "FAKE_BEARER_TOKEN")
     #expect(sut.currentUser?.email == "foo@bar.com")
 
-    // When
     try? sut.logout()
 
-    // Then
     #expect(stubKC.savedToken == nil)
     #expect(stubKC.savedUser == nil)
     #expect(sut.currentToken == nil)

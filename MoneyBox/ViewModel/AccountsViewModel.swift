@@ -37,7 +37,7 @@ final class AccountsViewModel: ObservableObject {
   }
   
   var totalPlanValue: Double {
-    //Need to rethink this one because value is wrong...
+    //Need to rethink this one because value is wrong... I think i am using wrong value or my calculation is wrong. it's 12:38 and i am tired. :(
     userAccount
       .map { Double($0.totalPlanValue ?? 0) / 100.0 }
       .reduce(0, +)

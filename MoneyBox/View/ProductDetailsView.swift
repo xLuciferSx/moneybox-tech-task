@@ -28,8 +28,19 @@ struct ProductDetailsView: View {
             Text(store.product?.product?.friendlyName
               ?? "unknown".localized)
               .font(.title3)
+              .accessibilityLabel("Product name")
+              .accessibilityValue(store.product?.product?.friendlyName ?? "Unknown")
+              .accessibilityIdentifier("product_title")
+
             Text("plan_value".localized(store.product?.planValue ?? 0))
+              .accessibilityLabel("Plan value")
+              .accessibilityValue("\(store.product?.planValue ?? 0)")
+              .accessibilityIdentifier("plan_value")
+
             Text("moneybox_value".localized(store.product?.moneybox ?? 0))
+              .accessibilityLabel("Moneybox value")
+              .accessibilityValue("\(store.product?.moneybox ?? 0)")
+              .accessibilityIdentifier("moneybox_value")
           }
 
           Spacer()
@@ -44,6 +55,8 @@ struct ProductDetailsView: View {
               }
             )
           )
+          .accessibilityLabel("Amount to add")
+          .accessibilityIdentifier("amount_text_field")
           .keyboardType(.numberPad)
           .textFieldStyle(.roundedBorder)
 
@@ -54,6 +67,7 @@ struct ProductDetailsView: View {
               Group {
                 if store.isLoading {
                   ProgressView()
+                    .accessibilityLabel("Loading")
                 } else {
                   Text("add_button".localized(store.amountString))
                 }
@@ -63,6 +77,8 @@ struct ProductDetailsView: View {
           }
           .buttonStyle(.borderedProminent)
           .disabled(store.amountString.isEmpty || store.isLoading)
+          .accessibilityLabel("Add money button")
+          .accessibilityIdentifier("add_button")
         }
         .padding()
       }
