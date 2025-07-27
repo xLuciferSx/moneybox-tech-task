@@ -7,10 +7,17 @@
 
 import Factory
 import Networking
+import ComposableArchitecture
 import SwiftUI
 
 struct ProductDetailsView: View {
-  let product: ProductResponse
+  @Perception.Bindable public var store: StoreOf<ProductDetailsLogic>
+  
+  public init(
+    store: StoreOf<ProductDetailsLogic>,
+  ) {
+    self.store = store
+  }
 
   var body: some View {
     ScrollView {
@@ -19,12 +26,11 @@ struct ProductDetailsView: View {
           .font(.title2).bold()
 
         VStack(alignment: .leading, spacing: 8) {
-          Text(product.product?.friendlyName
-            ?? product.product?.name
+          Text(store.product?.product?.friendlyName
             ?? "Unknown")
             .font(.title3)
-          Text("Plan Value: £\(product.planValue ?? 0, specifier: "%.0f")")
-          Text("Moneybox: £\(product.moneybox ?? 0, specifier: "%.0f")")
+          Text("Plan Value: £\(store.product?.planValue ?? 0, specifier: "%.0f")")
+          Text("Moneybox: £\(store.product?.moneybox ?? 0, specifier: "%.0f")")
         }
 
         Spacer()

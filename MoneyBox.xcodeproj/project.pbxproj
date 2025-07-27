@@ -11,6 +11,8 @@
 		1F263E152E32CFC4006CA3AA /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F263E142E32CFC2006CA3AA /* Container.swift */; };
 		1F263E192E32D27D006CA3AA /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F263E182E32D27A006CA3AA /* KeychainManager.swift */; };
 		1F263E1B2E32D316006CA3AA /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F263E1A2E32D316006CA3AA /* LoginManager.swift */; };
+		1F38386E2E36A9C600DFBAFA /* ProductDetailsLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F38386D2E36A9C000DFBAFA /* ProductDetailsLogic.swift */; };
+		1F3838712E36AA2F00DFBAFA /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 1F3838702E36AA2F00DFBAFA /* ComposableArchitecture */; };
 		1F819D1B2E32A45F008D5B45 /* MoneyBoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F819D1A2E32A45F008D5B45 /* MoneyBoxApp.swift */; };
 		1F819D1D2E32A4A3008D5B45 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F819D1C2E32A4A3008D5B45 /* LoginView.swift */; };
 		1F903C0A2E36699700AAD5C2 /* AccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F903C092E36699300AAD5C2 /* AccountsViewModel.swift */; };
@@ -49,6 +51,7 @@
 		1F263E142E32CFC2006CA3AA /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		1F263E182E32D27A006CA3AA /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		1F263E1A2E32D316006CA3AA /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		1F38386D2E36A9C000DFBAFA /* ProductDetailsLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsLogic.swift; sourceTree = "<group>"; };
 		1F819D1A2E32A45F008D5B45 /* MoneyBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyBoxApp.swift; sourceTree = "<group>"; };
 		1F819D1C2E32A4A3008D5B45 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1F903C092E36699300AAD5C2 /* AccountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewModel.swift; sourceTree = "<group>"; };
@@ -75,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F3838712E36AA2F00DFBAFA /* ComposableArchitecture in Frameworks */,
 				1FCE43D52E32D5070082A8C8 /* FactoryKit in Frameworks */,
 				B26EF47828881E7F003BFDF2 /* Networking in Frameworks */,
 				1FCE43DA2E32D5790082A8C8 /* KeychainSwift in Frameworks */,
@@ -107,6 +111,7 @@
 		1F8C36F22E32C1D600CC7C35 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				1F38386D2E36A9C000DFBAFA /* ProductDetailsLogic.swift */,
 				1F903C092E36699300AAD5C2 /* AccountsViewModel.swift */,
 				1F263E112E32C35C006CA3AA /* LoginViewModel.swift */,
 			);
@@ -264,6 +269,7 @@
 				1FCE43D22E32D5070082A8C8 /* Factory */,
 				1FCE43D42E32D5070082A8C8 /* FactoryKit */,
 				1FCE43D92E32D5790082A8C8 /* KeychainSwift */,
+				1F3838702E36AA2F00DFBAFA /* ComposableArchitecture */,
 			);
 			productName = MoneyBox;
 			productReference = B2CA46C8279350880041B3A5 /* MoneyBox.app */;
@@ -318,6 +324,7 @@
 			packageReferences = (
 				1FCE43D12E32D5070082A8C8 /* XCRemoteSwiftPackageReference "Factory" */,
 				1FCE43D82E32D5790082A8C8 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				1F38386F2E36AA2F00DFBAFA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = B2CA46C9279350880041B3A5 /* Products */;
 			projectDirPath = "";
@@ -361,6 +368,7 @@
 				1F903C112E366EFF00AAD5C2 /* DataProvider+Extension.swift in Sources */,
 				1FCE43DE2E32DF880082A8C8 /* AccountsManager.swift in Sources */,
 				1F263E1B2E32D316006CA3AA /* LoginManager.swift in Sources */,
+				1F38386E2E36A9C600DFBAFA /* ProductDetailsLogic.swift in Sources */,
 				1F903C1A2E3684CA00AAD5C2 /* String+Extension.swift in Sources */,
 				1FCE43DC2E32DDB60082A8C8 /* AccountsView.swift in Sources */,
 				1F263E122E32C361006CA3AA /* LoginViewModel.swift in Sources */,
@@ -640,6 +648,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1F38386F2E36AA2F00DFBAFA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.20.2;
+			};
+		};
 		1FCE43CD2E32D44C0082A8C8 /* XCRemoteSwiftPackageReference "Factory" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hmlongco/Factory";
@@ -667,6 +683,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1F3838702E36AA2F00DFBAFA /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F38386F2E36AA2F00DFBAFA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
 		1FCE43CF2E32D4B80082A8C8 /* FactoryTesting */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1FCE43CD2E32D44C0082A8C8 /* XCRemoteSwiftPackageReference "Factory" */;

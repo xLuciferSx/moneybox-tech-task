@@ -95,7 +95,7 @@ public struct Returns: Codable {
 }
 
 // MARK: - ProductResponse
-public struct ProductResponse: Codable {
+public struct ProductResponse: Codable, Equatable {
     public let id: Int?
     public let assetBoxGlobalID: String?
     public let planValue: Double?
@@ -144,7 +144,7 @@ public struct ProductResponse: Codable {
 }
 
 // MARK: - AssetBox
-public struct AssetBox: Codable {
+public struct AssetBox: Codable, Equatable {
     public let title: String?
 
     enum CodingKeys: String, CodingKey {
@@ -153,7 +153,7 @@ public struct AssetBox: Codable {
 }
 
 // MARK: - Contributions
-public struct Contributions: Codable {
+public struct Contributions: Codable, Equatable {
     public let status: String?
 
     enum CodingKeys: String, CodingKey {
@@ -162,7 +162,7 @@ public struct Contributions: Codable {
 }
 
 // MARK: - InvestorAccount
-public struct InvestorAccount: Codable {
+public struct InvestorAccount: Codable, Equatable {
     public let contributionsNet: Double?
     public let earningsNet: Double?
     public let earningsAsPercentage: Double?
@@ -177,7 +177,7 @@ public struct InvestorAccount: Codable {
 }
 
 // MARK: - MoneyboxCircle
-public struct MoneyboxCircle: Codable {
+public struct MoneyboxCircle: Codable, Equatable {
     public let state: String?
 
     enum CodingKeys: String, CodingKey {
@@ -186,7 +186,7 @@ public struct MoneyboxCircle: Codable {
 }
 
 // MARK: - Personalisation
-public struct Personalisation: Codable {
+public struct Personalisation: Codable, Equatable {
     public let quickAddDeposit: QuickAddDeposit?
     public let hideAccounts: HideAccounts?
 
@@ -197,7 +197,7 @@ public struct Personalisation: Codable {
 }
 
 // MARK: - HideAccounts
-public struct HideAccounts: Codable {
+public struct HideAccounts: Codable, Equatable {
     public let enabled: Bool?
     public let isHidden: Bool?
     public let sequence: Int?
@@ -210,7 +210,7 @@ public struct HideAccounts: Codable {
 }
 
 // MARK: - QuickAddDeposit
-public struct QuickAddDeposit: Codable {
+public struct QuickAddDeposit: Codable, Equatable {
     public let amount: Int?
 
     enum CodingKeys: String, CodingKey {
@@ -219,7 +219,7 @@ public struct QuickAddDeposit: Codable {
 }
 
 // MARK: - Product
-public struct Product: Codable {
+public struct Product: Codable, Equatable {
     public let id: Int?
     public let name: String?
     public let categoryType: String?
@@ -266,7 +266,7 @@ public struct Product: Codable {
 }
 
 // MARK: - Documents
-public struct Documents: Codable {
+public struct Documents: Codable, Equatable {
     public let keyFeaturesURL: String?
 
     enum CodingKeys: String, CodingKey {
@@ -275,7 +275,7 @@ public struct Documents: Codable {
 }
 
 // MARK: - Fund
-public struct Fund: Codable {
+public struct Fund: Codable, Equatable {
     public let fundID: Int?
     public let name: String?
     public let logoURL: String?
@@ -290,7 +290,7 @@ public struct Fund: Codable {
 }
 
 // MARK: - Lisa
-public struct Lisa: Codable {
+public struct Lisa: Codable, Equatable {
     public let maximumBonus: Int?
 
     enum CodingKeys: String, CodingKey {

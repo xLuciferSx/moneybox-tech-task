@@ -12,21 +12,18 @@ struct AccountsView: View {
   @StateObject private var viewModel = AccountsViewModel()
 
   var body: some View {
-    NavigationView {
-      ZStack {
-        if viewModel.isLoading {
-          ProgressView()
-            .scaleEffect(1.5)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .ignoresSafeArea()
-        } else {
-          mainContent
-        }
+    ZStack {
+      if viewModel.isLoading {
+        ProgressView()
+          .scaleEffect(1.5)
+          .frame(maxWidth: .infinity, maxHeight: .infinity)
+          .ignoresSafeArea()
+      } else {
+        mainContent
       }
-      .task { await viewModel.fetchAccountDetails() }
-      .padding()
-      .navigationBarTitleDisplayMode(.inline)
     }
+    .task { await viewModel.fetchAccountDetails() }
+    .padding()
   }
 
   private var mainContent: some View {
@@ -44,7 +41,12 @@ struct AccountsView: View {
         LazyVStack(alignment: .leading, spacing: 12) {
           ForEach(viewModel.products, id: \.id) { product in
             NavigationLink {
-              ProductDetailsView(product: product)
+              ProductDetailsView(
+                store: .init(initialState: .init(
+                  product: product
+                ), reducer: {
+                  ProductDetailsLogic()
+                }))
             } label: {
               AccountCardView(
                 title: product.product?.friendlyName ?? "Unknown",
