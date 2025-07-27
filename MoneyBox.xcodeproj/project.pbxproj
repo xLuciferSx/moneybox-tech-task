@@ -47,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F0A63F92E36D490006489BC /* MoneyBoxTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = MoneyBoxTests.xctestplan; sourceTree = "<group>"; };
 		1F263E112E32C35C006CA3AA /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		1F263E142E32CFC2006CA3AA /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		1F263E182E32D27A006CA3AA /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
@@ -188,6 +189,7 @@
 		B2CA46BF279350880041B3A5 = {
 			isa = PBXGroup;
 			children = (
+				1F0A63F92E36D490006489BC /* MoneyBoxTests.xctestplan */,
 				B2DEEA31288818470030A8F2 /* Packages */,
 				B2CA46CA279350880041B3A5 /* MoneyBox */,
 				B2CA46E12793508A0041B3A5 /* MoneyBoxTests */,

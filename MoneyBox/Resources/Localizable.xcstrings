@@ -12,8 +12,27 @@
         }
       }
     },
-    "Add £10" : {
-
+    "add_button" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add £%@"
+          }
+        }
+      }
+    },
+    "amount" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Amount"
+          }
+        }
+      }
     },
     "email" : {
       "extractionState" : "manual",
@@ -37,8 +56,16 @@
         }
       }
     },
-    "Individual Account" : {
-
+    "individual_account_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Individual Account"
+          }
+        }
+      }
     },
     "login" : {
       "extractionState" : "manual",
@@ -47,6 +74,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Login"
+          }
+        }
+      }
+    },
+    "money_added_succesfully" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your money has been added successfully!"
+          }
+        }
+      }
+    },
+    "moneybox_value" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Moneybox: £%.0f"
           }
         }
       }
@@ -79,6 +128,17 @@
     "Plan Value: £%.0f" : {
 
     },
+    "plan_value" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plan Value: £%.0f"
+          }
+        }
+      }
+    },
     "total_plan_value" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -86,6 +146,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Total Plan Value: £%.0f"
+          }
+        }
+      }
+    },
+    "unknown" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown"
           }
         }
       }

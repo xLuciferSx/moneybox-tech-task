@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "62004812-E200-46F6-9D4B-C72B19753786",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:MoneyBox.xcodeproj",
+        "identifier" : "B2CA46DD2793508A0041B3A5",
+        "name" : "MoneyBoxTests"
+      }
+    }
+  ],
+  "version" : 1
+}

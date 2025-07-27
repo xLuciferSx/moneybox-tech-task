@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct OneOffPaymentResponse: Decodable {
+public struct OneOffPaymentResponse: Decodable, Equatable, Sendable {
     public let moneybox: Double?
     
     enum CodingKeys: String, CodingKey {
